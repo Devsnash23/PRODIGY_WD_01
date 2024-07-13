@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Code</title>
+    <style><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Background Image</title>
+    <style>
+        body {
+            background-image: url('C:\Users\LENOVO\OneDrive\Desktop'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #555;
+        }
+    </style>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section id="home">
+            <h1>Home Section</h1>
+            <p>Welcome to my navigation menu .</p>
+
+            <p> Consulting: Professional advice to optimize business strategies, enhance performance, and drive growth.
+                Development: Custom software solutions, web development, and innovative tech services to meet your unique needs, ensuring efficient, scalable, and robust applications.
+                
+                This will fit well in a concise format for your navigation menu.</p>
+
+        </section>
+        <section id="about">
+            <h1>About Section</h1>
+    <div class="about-container">
+                <p>Consulting : Our consulting services provide expert guidance to help you optimize your business strategies, improve operational efficiency, and drive sustainable growth. We specialize in market analysis, business planning, and process optimization, offering tailored solutions to meet your unique challenges and objectives.
+
+                    Development : Our development services focus on creating custom software solutions that are innovative, scalable, and robust. We offer comprehensive web and mobile application development, system integration, and technical support. Our team of skilled developers ensures that your technology infrastructure is aligned with your business goals, providing a seamless user experience and competitive advantage.</p>
+                
+                <img src="about-image.jpg" alt="About Image" class="about-image">
+            </div>
+        </section>
+        <section id="services">
+            <h1>Services Section</h1>
+
+            <p>We offer services in web development consulting, web development, and more. Our expert team provides tailored solutions to optimize your online presence, enhance functionality, and ensure your website meets your business needs. From strategy to execution, we deliver innovative and effective web solutions.</p>
+        </section>
+        <section id="contact">
+            <h1>Contact Section</h1>
+            <p>You can contact on :
+                Email = devanshmishra@gmail.com
+                Phone = 9424891330
+            </p>
+        </section>
+        <section id="faq">
+            <h1>FAQ Section</h1>
+            <div class="faq-item">
+                <button class=" What types of consulting services do you offer?">Question 1</button>
+                <div class="faq-answer">
+                    <p>We offer a range of consulting services including business strategy, market analysis, process optimization, and IT consulting. Our goal is to help you improve efficiency, reduce costs, and drive growth. 1.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="How can your consulting services benefit my business?">Question 2</button>
+                <div class="faq-answer">
+                    <p>Our consulting services provide expert advice to identify opportunities for improvement, streamline operations, and implement effective strategies that align with your business goals, leading to increased productivity and profitability. 2.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <button id="scrollToTop">Top</button>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const scrollToTopButton = document.getElementById('scrollToTop');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                scrollToTopButton.style.display = 'block';
+            } else {
+                navbar.classList.remove('scrolled');
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.getElementById('scrollToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
